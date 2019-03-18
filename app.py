@@ -2,6 +2,7 @@ import dash
 #from dash.dependencies import Input, Output
 import dash_html_components as html
 import dash_core_components as dcc
+import dash_daq as daq
 import dash_table
 import pandas as pd
 import flask
@@ -122,7 +123,7 @@ app.layout  = html.Div(children=[
         },
     )], style={'width':'calc(100% - 1100px)','display':'inline','float':'right'}),
 
-'''
+
         daq.Thermometer(
             id='my-thermometer',
             value=61,
@@ -133,7 +134,7 @@ app.layout  = html.Div(children=[
                 'margin-top': '5%','margin-bottom': '5%','margin-right':'80px','float':'right'
             }
         ),
-'''
+
 
 ], style={'backgroundColor':'white'})
 
@@ -146,7 +147,7 @@ def dfRowFromHover(hoverData):
                 time_x = firstPoint['x']
                 return df.loc[df['time'] == time_x]
     return pd.Series()
-'''
+
 @app.callback(
     dash.dependencies.Output('my-thermometer', 'value'),
     [dash.dependencies.Input('graph', 'hoverData')])
@@ -157,6 +158,6 @@ def update_thermometer(hoverData):
             value = firstPoint['y']
             return value
 #server = app.server
-'''
+
 if __name__ == '__main__':
     app.run_server(debug=True)
