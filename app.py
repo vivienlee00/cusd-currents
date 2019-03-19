@@ -83,7 +83,9 @@ app.layout  = html.Div(children=[
     html.Div(children=
     [
         dcc.Graph(id='graph', figure=fig),
-    ],style={'float':'left','display': 'inline'}),
+        html.Br(),
+        html.P("This is the output from one of our earlier models. We're working to model the temperature in the room, so we can predict when we need to turn the heater on and when the heater can be off. If the algorithm predicts the professor will come to their office at 2pm, the model will predict how long it will take the room to get brought up to temperature, so we know when to turn the unit on so the room is ready just before his/she arrives to maximize energy savings.",style={'position':'absolute','margin':'auto','text-align':'center'})
+    ],style={'width':'800px', 'float':'left','display': 'inline', 'div-align':'center', 'margin':'auto', 'position':'relative'}),
 
     html.Div(children=[
     dash_table.DataTable(
