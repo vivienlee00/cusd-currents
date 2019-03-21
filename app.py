@@ -54,8 +54,8 @@ data = [ dict(
 layout = dict(
         colorbar = True,
         autosize=False,
-        width=700,
-        height=450,
+        width=600,
+        height=390,
          title='Room Air Temperature vs. Time',
          xaxis=dict(
          title='Time (minutes)',
@@ -118,12 +118,12 @@ app.layout  = html.Div(children=[
             'rule': 'display: inline; white-space: inherit; overflow: inherit; text-overflow: inherit;'
             }],
             style_table={
-            'maxHeight': '245',
+            'maxHeight': '315',
             'overflowY': 'scroll'
             },
         )], style={'width':'50%','display':'inline','float':'right','margin-right':'5px',}),
 
-    ],style={'width':'800px',  'backgroundColor':'white', 'float':'left','display': 'inline', 'div-align':'center', 'position':'relative'}),
+    ],style={'width':'600px',  'backgroundColor':'white', 'float':'left','display': 'inline', 'div-align':'center', 'position':'relative'}),
 
 
 
@@ -134,7 +134,7 @@ app.layout  = html.Div(children=[
             max=76,
             size=550,
             style={
-                'margin-top': '5%','margin-bottom': '5%','margin-right':'calc(100% - 880px)','float':'right'
+                'margin-top': '5%','margin-bottom': '5%','margin-right':'calc(100% - 680px)','float':'right'
             }
         ),
 
