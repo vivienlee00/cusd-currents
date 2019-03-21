@@ -54,8 +54,8 @@ data = [ dict(
 layout = dict(
         colorbar = True,
         autosize=False,
-        width=600,
-        height=390,
+        width=550,
+        height=350,
          title='Room Air Temperature vs. Time',
          xaxis=dict(
          title='Time (minutes)',
@@ -84,7 +84,7 @@ app.layout  = html.Div(children=[
     [
         dcc.Graph(id='graph', figure=fig),
         html.Br(),
-        html.P("This is the output from one of our earlier models. We're working to model the temperature in the room, so we can predict when we need to turn the heater on and when the heater can be off. If the algorithm predicts the professor will come to their office at 2pm, the model will predict how long it will take the room to get brought up to temperature, so we know when to turn the unit on so the room is ready just before his/she arrives to maximize energy savings.",style={'position':'absolute','margin-left':'10px','text-align':'left', 'width':'45%'}),
+        html.P("This is the output from one of our earlier models. We're working to model the temperature in the room, so we can predict when we need to turn the heater on and when the heater can be off. If the algorithm predicts the professor will come to their office at 2pm, the model will predict how long it will take the room to get brought up to temperature, so we know when to turn the unit on so the room is ready just before his/she arrives to maximize energy savings.",style={'fontSize':'13px','position':'absolute','margin-left':'10px','text-align':'left', 'width':'45%'}),
         html.Div(children=[
         dash_table.DataTable(
             id='table',
@@ -93,7 +93,7 @@ app.layout  = html.Div(children=[
                  #{'name': 'Status', 'id': 'Status', 'hidden': True}
                  ],
             data=df.to_dict("rows"),
-            style_cell={'fontWeight': 'lighter','textAlign': 'center', 'font-family':'Helvetica', 'fontSize':'16px','padding':'5px', 'width':'50px'},
+            style_cell={'fontWeight': 'lighter','textAlign': 'center', 'font-family':'Helvetica', 'fontSize':'14px','padding':'5px', 'width':'50px'},
             style_cell_conditional=[
                 {
                     'if': {'row_index': 'odd'},
@@ -123,7 +123,7 @@ app.layout  = html.Div(children=[
             },
         )], style={'width':'50%','display':'inline','float':'right','margin-right':'5px',}),
 
-    ],style={'width':'600px',  'backgroundColor':'white', 'float':'left','display': 'inline', 'div-align':'center', 'position':'relative'}),
+    ],style={'width':'550px',  'backgroundColor':'white', 'float':'left','display': 'inline', 'div-align':'center', 'position':'relative'}),
 
 
 
@@ -134,7 +134,7 @@ app.layout  = html.Div(children=[
             max=76,
             size=550,
             style={
-                'margin-top': '5%','margin-bottom': '5%','margin-right':'calc(100% - 680px)','float':'right'
+                'margin-top': '5%','margin-bottom': '5%','margin-right':'calc(100% - 615px)','float':'right'
             }
         ),
 
