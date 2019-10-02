@@ -59,6 +59,7 @@ layout = dict(
          title='Room Air Temperature vs. Time',
          xaxis=dict(
          title='Time (minutes)',
+         fixedrange = True,
          titlefont=dict(
          family='Helvetica',
          size=18,
@@ -67,6 +68,7 @@ layout = dict(
          ),
          yaxis=dict(
          title='Room Air Temperature (F)',
+         fixedrange = True,
          titlefont=dict(
          family='Helvetica',
          size=18,
@@ -82,7 +84,9 @@ app.layout  = html.Div(children=[
 
     html.Div(children=
     [
-        dcc.Graph(id='graph', figure=fig),
+        dcc.Graph(id='graph', figure=fig, config={
+        'displayModeBar': False
+    }),
 
     ],style={'width':'550px',  'backgroundColor':'white', 'float':'left','display': 'inline', 'div-align':'center', 'position':'relative'}),
 
